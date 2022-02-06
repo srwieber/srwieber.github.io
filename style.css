@@ -1,15 +1,22 @@
 body {
+  margin:0;
   background:#222;
+  font-family: Arial, sans-serif;
 }
 #pagebody {
+  width:80%;
+  min-height:100%;
+  margin:auto;
+  padding: 0 15px;
   background:#444;
   color:#aaa;
   border: 1px solid #aaa;
-  border-width: 2px 0;
+  border-width: 0 2px;
 }
 h1 {
-  color:#aa7
+  padding: 50px;
+  color:#000;
 }
-h2 {
-  color:#7aa
+h2 a {
+  color:#aaa;
 }
