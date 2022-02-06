@@ -1,6 +1,6 @@
 ## Customizing in Progress
 
-[About](/about)
+[About](/about) <br />
 [My Projects](/projects)
 
 <hr><hr>
