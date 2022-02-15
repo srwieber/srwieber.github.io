@@ -56,6 +56,16 @@ header h1 {
   font-style: italic;
   font-size: 24px;
 }
+
+.topnav .icon {
+  display:none;
+  position:absolute;
+  top:0;
+  right:0;
+  padding:15px;
+  background:#aaa;
+  color:#fff;
+}
 #menu {
   text-align:right;
 }
@@ -121,3 +131,30 @@ main h3, main h4 {
   padding-left:10px;
 }
 
+@media only screen and (max-width:915px) {
+  .topnav .icon {
+    display:block;
+  }
+  #menu {
+    display:none;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    padding-top:46px;
+    text-align:left;
+    background:#aaa;
+  }
+  #menu a {
+    display:block;
+    margin:0;
+    padding:14px;
+    background:#555;
+    color:#fff;
+    border:0;
+  }
+  #menu a:hover {
+    background:#777;
+    color:#000;
+  }
+}
