@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <title>Shawn Wieber | V3</title>
+  <title>Shawn Wieber | V4</title>
   <body>
     <header>
       <h1>Shawn Wieber</h1>
@@ -117,13 +117,13 @@
         if (active) {
           if( position >= $("#contact").offset().top && position - $(window).height() <= $("#projects").offset().top ){
             $('.card').hide();
-              console.log('cards hidden')
+              console.log('cards hidden');
               active = false;
           }
         }else {
           if( position - 225 >= $("#projects").offset().top && position - 225 <= $("#contact").offset().top ){
             $('.card').slideDown();
-            console.log('cards shown')
+            console.log('cards shown');
             active = true;
           }
         }
