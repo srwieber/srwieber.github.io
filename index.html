@@ -99,15 +99,15 @@
       <div>© Shawn Wieber 2022</div>
     </footer>
     <script>
-      function menuFunction() {
+      $('nav span .icon').click(function() {
         var x = document.getElementById("menu");
         if (x.style.display === "block") {
           x.style.display = "none";
         } else {
           x.style.display = "block";
         }
-      }
-      $("nav span").click(function() {
+      });
+      $('nav span').not('.icon').click(function() {
         var x = this.id.replace('Link','');
         $('html, body').animate({
             scrollTop: $('#' + x).offset().top
