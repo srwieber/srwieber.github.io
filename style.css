@@ -1,8 +1,8 @@
 :root {
   --color-one: #33a;
   --color-two: #44a;
-  --color-three: #a30;
-  --color-four: #b40;
+  --color-three: #55a;
+  --color-four: #55a;
   --light-one: #fff;
   --light-two: #aaa;
   --light-three: #ccc;
@@ -95,7 +95,7 @@ section:nth-child(odd) {
   background-image: linear-gradient(to right, var(--color-one), var(--color-one) 60%, var(--color-two) 61%);
 }
 section:nth-child(even) {
-  background: var(--light-three);
+  background-image: linear-gradient(to right, var(--color-three), var(--color-three) 60%, var(--color-four) 61%);
 }
 main section .container {
   width:80%;
@@ -138,6 +138,7 @@ main .card {
   height:200px;
   padding:10px;
   text-decoration:none;
+  background: var(--light-one);
   border-radius:8px;
   box-shadow: 0 0 20px var(--dark-one);
 }
