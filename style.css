@@ -56,14 +56,15 @@ header nav .icon {
 header #menu {
   text-align:right;
 }
-header #menu a {
+header #menu span {
+  cursor:pointer;
   text-decoration: none;
   border-bottom: 3px solid #000;
   margin:5px;
   padding:10px;
   transition: .25s;
 }
-header #menu a:hover {
+header #menu span:hover {
   color:#aaa;
   border-color:#aaa;
   transition: .25s;
@@ -74,6 +75,8 @@ main p {
 }
 main section {
   min-height:500px;
+  padding-top: 10px;
+  padding-bottom: 100px;
 }
 main #avy {
   float:right;
@@ -136,14 +139,14 @@ main .card_caption {
     text-align:left;
     box-shadow: -4px 4px 12px #000;
   }
-  header #menu a {
+  header #menu span {
     display:block;
     margin:0;
     padding:14px;
     background:#aaa;
     border:0;
   }
-  header #menu a:hover {
+  header #menu span:hover {
     background:#777;
     color:#000;
   }
