@@ -111,6 +111,11 @@
             scrollTop: $('#' + x).offset().top
         }, 500);
       });
+      $(window).on("scroll", function(){
+        if($(window).scrollTop() + $(window).height() - 100 >= $("#card_container").offset().top){
+          alert("On viewport");
+        }
+      })
     </script>
   </body>
 </html>
