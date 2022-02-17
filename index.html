@@ -112,13 +112,19 @@
         }, 500);
       });
       $(window).on("scroll", function(){
-        if($(window).scrollTop() + $(window).height() - 100 >= $("#card_container").offset().top){
+        if( $(window).scrollTop() + $(window).height() - 100 >= $("#card_container").offset().top ){
           $('.card').each(function() {
             $(this).slideDown();
           });
-        }else{
-          $('.card').hide();
         }
+        let x = $("#card_container").offset().top;
+        let y = $(window).scrollTop() + $(window).height();
+        let z = $(window).scrollTop() + $(window).height() - 100;
+        let a = $(window).scrollTop() + $(window).height() + 100;
+        console.log('x= ' + x);
+        console.log('y= ' + y);
+        console.log('z= ' + z);
+        console.log('a= ' + a);
       });
     </script>
   </body>
