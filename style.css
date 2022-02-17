@@ -75,6 +75,9 @@ main section {
   padding-top: 10px;
   padding-bottom: 100px;
 }
+section:nth-child(even) {
+  background: #ccc;
+}
 main section .container {
   width:80%;
   max-width:1000px;
