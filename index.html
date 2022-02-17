@@ -115,7 +115,7 @@
         let active = false;
         let position = $(window).scrollTop() + $(window).height();
         if (!active) {
-          if( position - 225 >= $("#projects").offset().top || position - 225 <= $("#contact").offset().top ){
+          if( position - 225 >= $("#projects").offset().top && position - 225 <= $("#contact").offset().top ){
             $('.card').each(function() {
               $(this).slideDown();
               console.log('cards shown')
@@ -124,7 +124,7 @@
           }
         }
         if (active) {
-          if( position >= $("#contact").offset().top || position - 225 <= $("#projects").offset().top ){
+          if( position >= $("#contact").offset().top && position - 225 <= $("#projects").offset().top ){
             $('.card').hide();
               console.log('cards hidden')
               active = false;
