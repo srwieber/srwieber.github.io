@@ -112,19 +112,22 @@
         }, 500);
       });
       $(window).on("scroll", function(){
-        if( $(window).scrollTop() + $(window).height() - 100 >= $("#card_container").offset().top ){
-          $('.card').each(function() {
-            $(this).slideDown();
-          });
+        let active = false;
+        let position = $(window).scrollTop() + $(window).height();
+        if (!active) {
+          if( position - 225 >= $("#projects").offset().top || position - 225 <= $("#contact").offset().top ){
+            $('.card').each(function() {
+              $(this).slideDown();
+              active = true;
+            });
+          }
         }
-        let x = $("#card_container").offset().top;
-        let y = $(window).scrollTop() + $(window).height();
-        let z = $(window).scrollTop() + $(window).height() - 100;
-        let a = $(window).scrollTop() + $(window).height() + 100;
-        console.log('x= ' + x);
-        console.log('y= ' + y);
-        console.log('z= ' + z);
-        console.log('a= ' + a);
+        if (active) {
+          if( position >= $("#contact").offset().top || position - 225 <= $("#projects").offset().top ){
+            $('.card').hide();
+              active = false;
+          }
+        }
       });
     </script>
   </body>
