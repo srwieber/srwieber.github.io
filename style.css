@@ -3,8 +3,6 @@ html, body {
 }
 body {
   overflow-y:scroll;
-  display:flex;
-  flex-direction: column;
   margin:0;
   font-family: Arial, sans-serif;
 }
@@ -23,7 +21,6 @@ header nav {
   flex:1;
 }
 main {
-  flex:auto;
   box-sizing: border-box;
   width:80%;
   max-width:1000px;
@@ -32,13 +29,10 @@ main {
 }
 footer {
   width:100%;
-  height: 100px;
   margin:auto;
   text-align: center;
   background:#aaa;
-}
-footer div {
-  padding: 40px;
+  padding: 40px 0;
 }
 
 h1 {
@@ -135,19 +129,18 @@ main .card_caption {
   header #menu {
     display:none;
     position:absolute;
-    width:100%;
-    top:0;
-    left:0;
-    padding-top:46px;
+    width:300px;
+    max-width:100%;
+    top:48px;
+    right:0;
     text-align:left;
-    background:#aaa;
+    box-shadow: -4px 4px 12px #000;
   }
   header #menu a {
     display:block;
     margin:0;
     padding:14px;
-    background:#555;
-    color:#fff;
+    background:#aaa;
     border:0;
   }
   header #menu a:hover {
