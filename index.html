@@ -20,9 +20,9 @@
           <span id="projectsLink">My Projects</span>
           <span id="contactLink">Contact</span>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+        <span class="icon" onclick="menuFunction()">
           <i class="fa fa-bars"></i>
-        </a>
+        </span>
       </nav>
     </header>
     <main>
@@ -107,9 +107,9 @@
       }
       $("nav span").click(function() {
         var x = this.id.replace('Link','');
-          $('html, body').animate({
-              scrollTop: $('#' + x).offset().top
-          }, 500);
+        $('html, body').animate({
+            scrollTop: $('#' + x).offset().top
+        }, 500);
       });
     </script>
   </body>
