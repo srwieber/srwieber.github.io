@@ -2,13 +2,13 @@
   --color-one: #33a;
   --color-two: #44a;
   --color-three: #000;
-  --color-four: #f30;
+  --color-four: #f50;
   --light-one: #fff;
   --light-two: #aaa;
   --light-three: #ccc;
   --dark-one: #000;
   --dark-two: #444;
-  --highlight-one: #f30;
+  --highlight-one: #f50;
 }
 
 html, body {
@@ -25,7 +25,7 @@ header {
   width:80%;
   max-width:1000px;
   margin: auto;
-  padding-top:20px;
+  padding: 17px 0 3px 0;
 }
 header h1 {
   margin:0;
@@ -45,32 +45,22 @@ footer {
 }
 
 h1 {
-  color: var(--dark-one);
+  color: var(--color-four);
   font-style: italic;
   font-size: 24px;
 }
 a {
-  color: var(--dark-one);
+  color: var(--light-two);
 }
 
-header nav .icon {
-  display:none;
-  position:absolute;
-  top:0;
-  right:0;
-  padding:15px;
-  font-size: 15.5px;
-  background: var(--light-two);
-  color: var(--color-one);
-  cursor:pointer;
-}
 header #menu {
   text-align:right;
 }
 header #menu span {
   cursor:pointer;
   text-decoration: none;
-  border-bottom: 3px solid var(--dark-one);
+  color: var(--dark-one);
+  border-bottom: 3px solid var(--color-four);
   margin:5px;
   padding:10px;
   transition: .25s;
@@ -80,6 +70,17 @@ header #menu span:hover {
   border-color: var(--light-two);
   transition: .25s;
 }
+header nav .icon {
+  display:none;
+  position:absolute;
+  top:0;
+  right:0;
+  padding: 15px;
+  font-size: 15.5px;
+  background: var(--light-two);
+  color: var(--color-one);
+  cursor:pointer;
+}
 
 main h2 {
   font-size:7vw;
@@ -87,7 +88,7 @@ main h2 {
 }
 main p {
   margin-left:20px;
-  font-size:2vw;
+  font-size:3vw;
   color: var(--light-one);
 }
 main section {
@@ -151,10 +152,76 @@ main .card:hover {
 }
 main .card img {
   width:100%;
-  height:150px;
+  height:160px;
 }
 main .card_caption {
-  padding:10px;
+  display:flex;
+  align-items: center;
+  padding: 0 5px;
+  height:37px;
+}
+main .card_caption span:first-of-type {
+  flex:auto;
+}
+main .card_caption span:last-of-type {
+  flex:1;
+  text-align: right;
+  white-space: nowrap;
+}
+main .card_caption span a {
+  padding:5px;
+  text-decoration:none;
+  color:var(--color-one);
+  background: var(--color-four);
+  border:1px solid var(--color-one);
+  border-radius:5px;
+}
+main .card_caption span a:hover {
+  color:var(--color-four);
+  background: var(--color-one);
+  border-color: var(--color-four);
+}
+#loading .leftloader {
+  position:fixed;
+  z-index:7;
+  top:0;
+  left:-20%;
+  width:60%;
+  height:100%;
+  background: var(--color-four);
+  transform: skew(20deg);
+}
+#loading .middleloader {
+  position:fixed;
+  z-index:8;
+  top:0;
+  right:-60%;
+  width:40%;
+  height:100%;
+  background: var(--dark-one);
+  transform: skew(20deg);
+}
+#loading .rightloader {
+  position:fixed;
+  z-index:7;
+  top:0;
+  right:-20%;
+  width:80%;
+  height:100%;
+  background: var(--dark-two);
+  transform: skew(20deg);
+}
+main .avy {
+  position:fixed;
+  z-index:9;
+  top:19%;
+  right:60%;
+  width:150px;
+  height:150px;
+  background: url(https://avatars.githubusercontent.com/u/98571215?v=4) no-repeat 58% 20%;
+  border:5px solid var(--color-four);
+  border-radius:100px;
+  box-shadow: 0 0 20px var(--dark-one);
 }
 @media only screen and (max-width:915px) {
   header nav .icon {

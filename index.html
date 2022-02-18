@@ -40,7 +40,8 @@
       </section>
       <section id="about">
         <div class="container">
-          <h2>I'm a Front End Web Developer that loves to enhance the user experience. </h2>
+          <h2>About Me</h2>
+          <p>I'm a Front End Web Developer that loves to enhance the user experience. </p>
           <p>I'm passionate about creating sites that are easy to navigate, accessible, professional, responsive and error free.</p>
           <p>I have been modifying sites since 2010 when I discovered my passion for enhancing my online fantasy football league on 
             <a href="http://home.myfantasyleague.com/" target="_blank">myfantasyleague.com</a>. 
@@ -62,43 +63,83 @@
       </section>
       <section id="projects">
         <div id="card_container" class="container">
-          <a href="https://github.com/srwieber/rosterwars" class="card" target="_blank">
+          <h2>Here's my projects</h2>
+          <div class="card">
             <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">Roster Wars</div>
-          </a>
-          <a href="https://github.com/srwieber/mvp" class="card" target="_blank">
+            <div class="card_caption">
+              <span>Roster Wars</span>
+              <span>
+               <a href="https://rosterwars.forumotion.com" target="_blank">Site</a> 
+               <a href="https://github.com/srwieber/rosterwars" target="_blank">Code</a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
             <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">MVP</div>
-          </a>
-          <a href="https://github.com/srwieber/mvp/tree/main/rosters" class="card" target="_blank">
+             <div class="card_caption">
+              <span>MVP</span>
+              <span>
+               <a href="https://www68.myfantasyleague.com/2022/home/36134" target="_blank">Site</a> 
+               <a href="https://github.com/srwieber/mvp" target="_blank">Code</a>
+              </span>
+             </div>
+          </div>
+          <div class="card">
             <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">Roster Comparison</div>
-          </a>
-          <a href="https://github.com/srwieber/mvp/tree/main/rosters" class="card" target="_blank">
+            <div class="card_caption">
+              <span>Roster Comparison</span>
+              <span>
+                <a href="https://www68.myfantasyleague.com/2022/options?L=36134&O=247&SEQNO=7" target="_blank">Site</a> 
+                <a href="https://github.com/srwieber/mvp/tree/main/rosters" target="_blank">Code</a>
+              </span>
+            </div>
+          </div>
+          <div class="card">
             <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">Draft History</div>
-          </a>
-          <a href="https://github.com/srwieber/mvp/tree/main/draft_history" class="card" target="_blank">
+            <div class="card_caption">
+              <span>Draft History</span>
+              <span>
+                <a href="https://www68.myfantasyleague.com/2022/options?L=36134&O=247&SEQNO=13" target="_blank">Site</a> 
+                <a href="https://github.com/srwieber/mvp/tree/main/draft_history" target="_blank">Code</a>
+               </span>
+            </div>
+          </div>
+          <div class="card">
             <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">Draft History</div>
-          </a>
-          <a href="https://github.com/srwieber/mvp/tree/main/team_details" class="card" target="_blank">
-            <img src="https://i.ibb.co/ZNGHMk4/darksteal.jpg">
-            <div class="card_caption">Team Details</div>
-          </a>
+            <div class="card_caption">
+              <span>Team Details</span>
+              <span>
+                <a href="https://www68.myfantasyleague.com/2021/options?L=36134&O=247&SEQNO=15" target="_blank">Site</a> 
+                <a href="https://github.com/srwieber/mvp/tree/main/team_details" target="_blank">Code</a>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
       <section id="contact">
         <div class="container">
-          <h1>Contact</h1>
-          <h2>Contact form coming soon!</h2>
+          <h2>Contact Me</h2>
+          <h1>Contact form coming soon!</h1>
         </div>
+      </section>
+      <section id="loading">
+        <div class="leftloader"></div><div class="middleloader"></div><div class="avy"></div><div class="rightloader"></div>
       </section>
     </main>
     <footer>
       <div>© Shawn Wieber 2022</div>
     </footer>
     <script>
+      $(function() {
+        $('#loading .avy').animate({top: '25%'}, 250).animate({top: '19%'}, 250, function() {
+          $('#loading .avy').animate({right: '-80%'}, 2000);
+          $('#loading .leftloader').animate({left: '-80%'}, 1500);
+          $('#loading .middleloader').animate({right: '120%'}, 1000);
+          $('#loading .rightloader').animate({right: '-100%'}, 1500, function() {
+            $('#loading').remove();
+          });
+        });
+      });
       $('nav span.icon').click(function() {
         var x = document.getElementById("menu");
         if (x.style.display === "block") {
@@ -110,7 +151,7 @@
       $('nav span').not('.icon').click(function() {
         var x = this.id.replace('Link','');
         $('html, body').animate({
-            scrollTop: $('#' + x).offset().top
+          scrollTop: $('#' + x).offset().top
         }, 500);
       });
       let active = false;
