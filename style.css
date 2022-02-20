@@ -200,6 +200,45 @@ main .card_caption span a:hover {
   background: var(--color-one);
   border-color: var(--color-four);
 }
+form {
+  display:flex;
+  flex-direction:column;
+  margin:auto;
+  padding:30px;
+  background: var(--dark-two);
+  border: 2px solid var(--light-two);
+}
+form label {
+  padding:5px;
+  color: var(--light-two);
+  text-transform:uppercase;
+}
+form input, 
+form textarea {
+  margin-top:5px;
+  width:99%;
+  background: var(--light-two);
+  border: 2px solid var(--dark-one);
+}
+form input {
+  height:40px;
+}
+form textarea {
+  height:300px;
+}
+form button {
+  margin: 10px auto;
+  width:99%;
+  height:50px;
+  color: var(--light-two);
+  background: var(--dark-two);
+  border: 2px solid var(--light-two);
+  cursor:pointer;
+}
+form button:hover {
+  color: var(--color-four);
+  border-color: var(--color-four);
+}
 #loading .leftloader {
   position:fixed;
   z-index:7;
