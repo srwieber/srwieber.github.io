@@ -40,8 +40,14 @@ footer {
   width:100%;
   margin:auto;
   text-align: center;
+  color: var(--dark-two);
   background: var(--light-two);
   padding: 40px 0;
+}
+footer a {
+  margin: 5px;
+  color: var(--dark-two);
+  font-size:150%;
 }
 
 h1 {
@@ -51,6 +57,9 @@ h1 {
 }
 a {
   color: var(--light-two);
+}
+a {
+  color: var(--color-four);
 }
 
 header #menu {
