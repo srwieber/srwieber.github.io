@@ -173,10 +173,6 @@ main .card {
   background: var(--light-one);
   border-radius:8px;
   box-shadow: 0 0 20px var(--dark-one);
-/*
-  transform: scale(0.95);
-  transition: transform .2s;
-*/
   transform: translateX(-30px);
   transition: all 0.5s ease-in-out;
 }
@@ -193,7 +189,7 @@ main .card img {
   width:100%;
   height:160px;
   object-fit: cover;
-  object-position: top center;
+  object-position: center center;
   transition: transform 1s;
 }
 main .card_caption {
